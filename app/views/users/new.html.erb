@@ -1,2 +1,19 @@
 <h1>Users#new</h1>
 <p>Find me in app/views/users/new.html.erb</p>
+<br>
+
+<%= form_for @user do |f| %>
+	<%= f.label :name, "Name" %><br>
+	<%= f.text_field :name %><br>
+	<%= f.label :email, "E-mail" %><br>
+	<%= f.text_field :email %><br>
+	<%= f.label :first_name, "First name" %><br>
+	<%= f.text_field :first_name %><br>
+	<%= f.label :last_name, "Last name" %><br>
+	<%= f.text_field :last_name %><br>
+	<%= f.label :birth_date, "Birth date" %><br>
+	<%= f.text_field :birth_date %><br>
+	<%= f.label :self_info, "Self info" %><br>
+	<%= f.text_area :self_info %><br>
+	<%= f.submit "Создать" %>
+<% end %>
