@@ -9,6 +9,18 @@
   </head>
 
   <body>
+    <div style="border: 1px dotted red;
+                width: 100%; height: 60px;
+                padding: none;
+                margin: none;">
+        <% if user_signed_in? %>
+          <span>Здравствуйте, <%= current_user.email %>!</span>
+          <%= link_to 'Выйти', destroy_user_session_path, :method => :delete %>
+        <% else %>
+          <%= link_to 'Войти', new_user_session_path %> или 
+          <%= link_to 'Зарегистрироваться', new_user_registration_path %>
+        <% end %>
+    </div>
   	<p class="notice"><%= notice %></p>
   	<p class="alert"><%= alert %></p>
     <%= yield %>

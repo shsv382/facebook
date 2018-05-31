@@ -1,4 +1,6 @@
 class UsersController < ApplicationController
+  before_action :authenticate_user!, only: [:show, :edit, :update, :destroy]
+
   def index
     @users = User.find_each do |user|
       return user.name
