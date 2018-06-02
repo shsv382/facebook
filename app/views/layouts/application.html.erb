@@ -45,20 +45,27 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="#">Facebook</a>
-        <% if user_signed_in? %>
+        
+        
         <h3>
-          <%= current_user.name %> 
-          <%= link_to "Выйти", destroy_user_session_path, method: :delete %>
+          <% if user_signed_in? %>
+            <%= link_to current_user.name, current_user %> 
+          <% else %>
+            <%= link_to "Tiny facebook", root_path %> 
+          <% end %>
         </h3>
-        <% end %>
+        
         <div class="navbar-collapse collapse navbar-responsive-collapse">
-          Войти с помощью:
+          
           <ul class="nav navbar-nav">
-            
+            <% if user_signed_in? %>
+              <li><%= link_to "Выйти", destroy_user_session_path, method: :delete %></li>
+            <% else %>
+              <li><%= link_to "Войти с помощью:",  "#"  %></li>
             <li><%= link_to "Facebook",  user_facebook_omniauth_authorize_path  %></li>
             <li><%= link_to "Vkontakte", user_vkontakte_omniauth_authorize_path  %></li>
             <li><%= link_to "Зарегистрироваться", new_user_registration_path  %></li>
+            <% end %>
           </ul>
         </div>
       </div>

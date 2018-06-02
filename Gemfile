@@ -14,9 +14,11 @@ gem 'pg', '>= 0.18', '< 2.0'
 gem 'puma', '~> 3.7'
 # Use SCSS and bootstrap for stylesheets
 gem 'sass-rails', '~> 5.0'
+
+gem 'bootstrap-sass'
 gem 'jquery-rails'
 gem "therubyracer"
-gem "less-rails"
+# gem "less-rails"
 gem 'twitter-bootstrap-rails'
 gem 'sprockets'
 # Use Uglifier as compressor for JavaScript assets
