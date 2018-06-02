@@ -12,8 +12,13 @@ gem 'rails', '~> 5.1.5'
 gem 'pg', '>= 0.18', '< 2.0'
 # Use Puma as the app server
 gem 'puma', '~> 3.7'
-# Use SCSS for stylesheets
+# Use SCSS and bootstrap for stylesheets
 gem 'sass-rails', '~> 5.0'
+gem 'jquery-rails'
+gem "therubyracer"
+gem "less-rails"
+gem 'twitter-bootstrap-rails'
+gem 'sprockets'
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
 # See https://github.com/rails/execjs#readme for more supported runtimes
@@ -32,6 +37,8 @@ gem 'jbuilder', '~> 2.5'
 # Use Devise for authentication
  gem 'devise'
  gem 'omniauth'
+ gem 'omniauth-facebook'
+ gem 'omniauth-vkontakte'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 

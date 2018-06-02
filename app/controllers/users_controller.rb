@@ -8,6 +8,7 @@ class UsersController < ApplicationController
   end
 
   def show
+    @hash  = request.env["omniauth.auth"]
   end
 
   def new
