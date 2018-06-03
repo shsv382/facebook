@@ -66,3 +66,6 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 # Using figaro to hide ENV-variables 
 gem 'figaro'
+
+# Using paperclip for uploading images
+gem "paperclip", :git => "git://github.com/thoughtbot/paperclip.git"
