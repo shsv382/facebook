@@ -9,6 +9,7 @@ class UsersController < ApplicationController
 
   def show
     @hash  = request.env["omniauth.auth"]
+    @user = User.find(params[:id])
   end
 
   def new
