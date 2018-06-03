@@ -25,9 +25,18 @@ class UsersController < ApplicationController
   end
 
   def edit
+    @user = current_user
   end
 
   def update
+      @user = User.find(params[:id])
+        if @user.update_attributes(user_params)
+          flash[:success] = "Профиль обновлен!"
+          redirect_to @user
+        else
+          flash[:error] = "Введите корректные данные!"
+          render 'edit'
+        end
   end
 
   def destroy
@@ -36,6 +45,6 @@ class UsersController < ApplicationController
   private
   def user_params
     params.require(:user).permit(:name, :email, :first_name, 
-                :last_name, :birth_date, :self_info)
+                :last_name, :birth_date, :self_info, :avatar)
   end
 end

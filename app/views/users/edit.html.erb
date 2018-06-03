@@ -1,2 +1,20 @@
 <h1>Users#edit</h1>
 <p>Find me in app/views/users/edit.html.erb</p>
+
+<center>
+<%= form_for @user do |f| %>
+	<%= f.label :name, "Name" %><br>
+	<%= f.text_field :name, class: "text" %><br>
+	<%= f.label :email, "E-mail" %><br>
+	<%= f.text_field :email, class: "text" %><br>
+	<%= f.label :first_name, "First name" %><br>
+	<%= f.text_field :first_name, class: "text" %><br>
+	<%= f.label :last_name, "Last name" %><br>
+	<%= f.text_field :last_name, class: "text" %><br>
+	<%= f.label :birth_date, "Birth date" %><br>
+	<%= f.text_field :birth_date, class: "text" %><br>
+	<%= f.label :self_info, "Self info" %><br>
+	<%= f.text_area :self_info, class: "text" %><br>
+	<%= f.submit "Сохранить", class: "button" %>
+<% end %>
+</center>
