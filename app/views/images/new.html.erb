@@ -1,0 +1,8 @@
+<center>
+<%= form_for :image, html: { multipart: true } do |f| %>
+	<%= f.label :description, "Description" %><br>
+	<%= f.text_field :description, class: "text" %><br>
+	<%= f.file_field :image %><br>
+	<%= f.submit "Сохранить", class: "button" %>
+<% end %>
+</center>

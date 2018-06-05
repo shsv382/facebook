@@ -2,3 +2,5 @@
 <h1><%= @user.name %>, id:<%= @user.id %></h1>
 <h1><%= image_tag @user.avatar %></h1>
 <p>Find me in app/views/users/show.html.erb</p>
+<%= link_to "Загрузить изображение", new_user_image_path(@user.id) %>
+
