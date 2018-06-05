@@ -4,3 +4,12 @@
 <p>Find me in app/views/users/show.html.erb</p>
 <%= link_to "Загрузить изображение", new_user_image_path(@user.id) %>
 
+<ul>
+	<% @images.each do |img| %>
+		<li>
+			<%= img.description %><br>
+			<%= image_tag img.image %>
+		</li><br><br>
+	<% end %>
+</ul>
+

@@ -10,6 +10,7 @@ class UsersController < ApplicationController
   def show
     @hash  = request.env["omniauth.auth"]
     @user = User.find(params[:id])
+    @images = Image.where(user_id: @user.id)
   end
 
   def new

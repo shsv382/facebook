@@ -1,6 +1,6 @@
 class ImagesController < ApplicationController
 	def index
-		@images = Image.where(user_id: params[:user_id])
+#		@images = Image.where(user_id: params[:user_id])
 	end
 
 	def new
