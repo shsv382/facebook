@@ -53,8 +53,11 @@
           <% else %>
             <%= link_to "Tiny facebook", root_path %> 
           <% end %>
+          <%= image_tag @user.avatar, style: "display: block;float:right;", height: "70px" if @user.avatar %>
         </h3>
+                      
         
+                   
         <div class="navbar-collapse collapse navbar-responsive-collapse">
           
           <ul class="nav navbar-nav">
@@ -67,6 +70,7 @@
             <li><%= link_to "Facebook",  user_facebook_omniauth_authorize_path  %></li>
             <li><%= link_to "Vkontakte", user_vkontakte_omniauth_authorize_path  %></li>
             <li><%= link_to "Зарегистрироваться", new_user_registration_path  %></li>
+
             <% end %>
           </ul>
         </div>

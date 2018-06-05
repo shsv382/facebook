@@ -10,7 +10,7 @@ class User < ApplicationRecord
          :omniauth_providers => [:facebook, :vkontakte]
 
     def self.find_for_facebook_oauth access_token
-    	if user = User.where(:name => access_token.extra.raw_info.name).first
+    	if user = User.where(:email => access_token.extra.raw_info.email).first
     		user
     	else
     		User.create!(#provider: access_token.provider,
